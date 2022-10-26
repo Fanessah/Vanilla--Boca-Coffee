@@ -1,7 +1,7 @@
 const coffeeContainer = document.querySelector('main')
 
 function setLoading() {
-    coffeeContainer.innerHTML = " "
+    coffeeContainer.innerHTML = ""
     const h2 = document.createElement("h2")
     const loading = document.createTextNode("LOADING...")
     h2.appendChild(loading)
@@ -25,9 +25,9 @@ function displayCoffeeList(coffeelist) {
 
 function getCoffee(temp) {
     setLoading()
-    fetch(`https://api.sampleapis.com/coffee/hot${temp}`)
+    fetch(`https://api.sampleapis.com/coffee/${temp}`)
     .then(response => response.json()) 
-    .then(coffeelist => display(coffeelist))
+    .then(displayCoffeeList)
     .catch(console.error) //TODO:DISPLAY ERROR FOR USER
 
 }

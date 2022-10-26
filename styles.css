@@ -1,5 +1,5 @@
 body {
-    background-color: bisque
+    background-color: bisque;
 }
 
 .container{
@@ -14,7 +14,7 @@ header,main {
     width: 100%;
     text-align: center;
     margin-bottom: 1em;
-    padding: 2m;
+    padding: 2em;
 
 }
 
