@@ -13,7 +13,7 @@
             <h1>Contact</h1>
         </header>
         <main>
-            <form action="/index.html" method="post">
+            <form action="/" method="post"> id="myform"
                 <label for="email">Email Address </label>
                 <input id="email" name="email" type="text" placeholder="youremail@gmail.com">
         </br>
@@ -28,7 +28,11 @@
 </br>
     <label for="description">Description</label>
     <textarea name="description" id="description" cols="30" rows="5"></textarea>
-</br> 
+<br/> 
+<label for="file">file</label>
+<input type="file" name="" id="" multiple/>
+
+
     <label for="cars>Cars"></label>
     <select name="cars" id="cars" multiple>
         <option value="audi"> Audi</option>
@@ -36,12 +40,28 @@
         <option value="tesla" selected> Tesla</option>
         <option value="ford">Ford</option>
     </select>
+     <label for="radio">radio></label>
+     <input type="radio" name="select" id="" value="myRadio1" />
+     <input type="radio" name="select" id="" value="myRadio2" />
+     <input type="radio" name="select" id="" value="myRadio3" />
     <button type="submit"> Submit</button>
 
             </form>
 
         </main>
+        <button onclick="changeHeading()"> Change Heading </button>
+
     </div>
+    <script>
+        function changeHeading() {
+        const heading = document.getElementById('heading')
+        console.log(heading)
+
+        heading.innerHTML("Im new ")
+        
+
+        }
+    </script>
 
 </body>
 </html>
