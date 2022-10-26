@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>Contact</h1>
+            <h1 id="heading">Contact</h1>
         </header>
         <main>
             <form action="/" method="post"> id="myform"
@@ -39,8 +39,9 @@
         <option value="gmc">GMC</option>
         <option value="tesla" selected> Tesla</option>
         <option value="ford">Ford</option>
+
     </select>
-     <label for="radio">radio></label>
+     <label for="radio">radio</label>
      <input type="radio" name="select" id="" value="myRadio1" />
      <input type="radio" name="select" id="" value="myRadio2" />
      <input type="radio" name="select" id="" value="myRadio3" />
@@ -49,7 +50,10 @@
             </form>
 
         </main>
-        <button onclick="changeHeading()"> Change Heading </button>
+        <button onclick="changeHeading()"> Change Heading</button>
+        <button type="button" onclick="currentTime()"> Show Time</button>
+        
+        <p id="time"> </p>
 
     </div>
     <script>
@@ -57,11 +61,18 @@
         const heading = document.getElementById('heading')
         console.log(heading)
 
-        heading.innerHTML("Im new ")
+        heading.innerText = "Im new "
+        heading.style.color = "red"
+        heading.style.textAlign = "left"
+
         
-
-        }
-    </script>
-
+    }
+    
+ 
+function currentTime() {
+    document.getElementById('time').innerHTML = Date() }
+ 
+   
+</script>
 </body>
 </html>
